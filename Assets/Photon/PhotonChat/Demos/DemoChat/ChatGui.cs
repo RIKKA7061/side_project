@@ -1,22 +1,13 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Exit Games GmbH"/>
-// <summary>Demo code for Photon Chat in Unity.</summary>
-// <author>developer@exitgames.com</author>
-// --------------------------------------------------------------------------------------------------------------------
-
-using System;
+﻿using System;
 using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEngine.UI;
-
 using Photon.Chat;
 using Photon.Realtime;
 using AuthenticationValues = Photon.Chat.AuthenticationValues;
 #if PHOTON_UNITY_NETWORKING
 using Photon.Pun;
 #endif
-
 
 namespace Photon.Chat.Demo
 {
@@ -387,7 +378,7 @@ namespace Photon.Chat.Demo
 
             this.ConnectingLabel.SetActive(false);
 
-            this.UserIdText.text = "Connected as "+ this.UserName;
+            this.UserIdText.text = "이름: "+ this.UserName;
 
             this.ChatPanel.gameObject.SetActive(true);
 
@@ -657,9 +648,6 @@ namespace Photon.Chat.Demo
         {
             Application.OpenURL("https://dashboard.photonengine.com");
         }
-
-
-
 
     }
 }

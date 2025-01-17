@@ -1704,7 +1704,12 @@ namespace Photon.Chat
             return this.chatPeer.SendOperation(ChatOperationCode.Subscribe, opParameters, SendOptions.SendReliable);
         }
 
-        #if CHAT_EXTENDED
+		public void Connect(object appId, string v, AuthenticationValues authenticationValues)
+		{
+			throw new NotImplementedException();
+		}
+
+#if CHAT_EXTENDED
 
         internal bool SetChannelProperties(string channelName, Dictionary<object, object> channelProperties, Dictionary<object, object> expectedProperties = null, bool httpForward = false)
         {
@@ -1855,6 +1860,6 @@ namespace Photon.Chat
             this.listener.OnErrorInfo(channel, msg, data);
         }
 
-        #endif
-    }
+#endif
+	}
 }
